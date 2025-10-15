@@ -1,6 +1,12 @@
 TS
 ex.js
 index.html
+pom-ex-signin+garage
+signinEx.spec.ts
+SignInFormEx.ts
+GarageEx.spec.ts
+BasePageEx.ts
+signinEx.spec.ts-snapshots
 
 # Playwright
 node_modules/
