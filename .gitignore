@@ -7,6 +7,7 @@ SignInFormEx.ts
 GarageEx.spec.ts
 BasePageEx.ts
 signinEx.spec.ts-snapshots
+.env
 
 # Playwright
 node_modules/
