@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "commonjs",
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": false,
+    "strict": false,
+    "esModuleInterop": true
+  },
+  "include": ["./pom/**/*.ts", "./tests/**/*.ts", "./TS/**/*.ts"]
+}

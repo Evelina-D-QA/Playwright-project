@@ -1,5 +1,6 @@
 import { Locator } from '@playwright/test';
 import BasePage from '../pages/BasePage';
+import step from '../utils/stepDecorator';
 
 export default class SignUpForm extends BasePage {
 	public readonly nameField: Locator = this.page.locator('//input[@id="signupName"]');
@@ -15,6 +16,8 @@ export default class SignUpForm extends BasePage {
 	public readonly formControlRepeatPassword: Locator = this.page.locator('#signupRepeatPassword');
 	public readonly formValidateAlert: Locator = this.page.locator('//p[@class="alert alert-danger"]');
 
+
+	@step('Register user')
 	async userRegistration(name: string, lastName: string, email: string, password: string, repeatPassword: string) {
 		await this.enterName(name);
 		await this.enterLastName(lastName);
@@ -23,26 +26,32 @@ export default class SignUpForm extends BasePage {
 		await this.enterRepeatPassword(repeatPassword);
 	}
 
+	@step('Enter Name')
 	async enterName(name: string) {
 		await this.nameField.fill(name);
 	}
 
+	@step('Enter Last Name')
 	async enterLastName(lastName: string) {
 		await this.lastNameField.fill(lastName);
 	}
 
+	@step('Enter Email')
 	async enterEmail(email: string) {
 		await this.emailField.fill(email);
 	}
 
+	@step('Enter Password')
 	async enterPassword(password: string) {
 		await this.passwordField.fill(password);
 	}
 
+	@step('Enter Repeat Password')
 	async enterRepeatPassword(repeatPassword: string) {
 		await this.repeatPasswordField.fill(repeatPassword);
 	}
 
+	@step('Click Register')
 	async clickRegisterButton() {
 		await this.registerButton.click();
 	}
