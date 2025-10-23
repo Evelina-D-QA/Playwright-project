@@ -1,6 +1,6 @@
 import { Locator } from '@playwright/test';
 import BasePage from '../pages/BasePage';
-import step from '../utils/stepDecorator';
+import step from '../../utils/stepDecorator';
 
 export default class SignUpForm extends BasePage {
 	public readonly nameField: Locator = this.page.locator('//input[@id="signupName"]');

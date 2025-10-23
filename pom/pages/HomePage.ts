@@ -1,6 +1,6 @@
 import { Locator } from '@playwright/test';
 import BasePage from './BasePage';
-import step from '../utils/stepDecorator';
+import step from '../../utils/stepDecorator';
 
 export default class HomePage extends BasePage {
 	private readonly signUpButton: Locator = this.page.locator('//button[contains(@class, "hero-descriptor_btn")]');
