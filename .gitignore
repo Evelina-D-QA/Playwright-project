@@ -8,6 +8,9 @@ GarageEx.spec.ts
 BasePageEx.ts
 signinEx.spec.ts-snapshots
 .env
+.auth
+session-storage.spec.ts
+screenSizes.ts
 
 # Playwright
 node_modules/
