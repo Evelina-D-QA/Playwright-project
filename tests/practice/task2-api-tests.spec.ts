@@ -1,7 +1,7 @@
 import test, { expect } from '@playwright/test';
-import AuthController from '../api/controllers/AuthController';
-import CarsController from '../api/controllers/CarsController';
-import { testUser1 } from '../test-data/users';
+import AuthController from '../../api/controllers/AccountController';
+import CarsController from '../../api/controllers/CarsController';
+import { testUser1 } from '../../test-data/users';
 
 test.describe('API requests', () => {
 	let authController: AuthController;

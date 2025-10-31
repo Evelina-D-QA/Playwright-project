@@ -47,7 +47,8 @@ export default defineConfig({
     {
       name: 'setup',
       use: { ...devices['Desktop Chrome'] },
-      testMatch: '**/setup/**.setup.ts'
+      testMatch: '**/setup/**.setup.ts',
+      workers: 1, // важно тк есть проект setup, чтобы не было параллельного выполнения
     },
      {
       name: 'e2e',
