@@ -1,4 +1,4 @@
-import { test, expect } from '../utils/fixtures/userGaragePage';
+import { test, expect } from '../utils/fixtures/userGaragePageFixture';
 // import SignInForm from '../pom/forms/SignInForm';
 // import HomePage from '../pom/pages/HomePage';
 // import GaragePage from '../pom/pages/GaragePage';

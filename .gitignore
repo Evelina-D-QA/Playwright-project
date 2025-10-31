@@ -11,6 +11,8 @@ signinEx.spec.ts-snapshots
 .auth
 session-storage.spec.ts
 screenSizes.ts
+api-requests.spec.ts
+garage-storage-state.spec.ts
 
 # Playwright
 node_modules/

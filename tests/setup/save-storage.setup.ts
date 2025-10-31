@@ -23,7 +23,7 @@ test.describe('Login and save states', () => {
 	test('Login as testUser1 and save state', async ({ page }) => {
 		signInForm = new SignInForm(page);
 
-		await signInForm.loginWithCredentials('evie.maier.w+1234567@gmail.com', 'Password123');
+		await signInForm.loginWithCredentials('evie.maier.w@gmail.com', 'WCFbdvR2wX5Anm9');
 		await expect(garagePage.pageTitle).toBeVisible();
 		await page.context().storageState({ path: '.auth/testUser1.json' });
 	});
