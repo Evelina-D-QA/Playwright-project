@@ -2,7 +2,9 @@
   "name": "playwright-project",
   "version": "1.0.0",
   "main": "ex.js",
-  "scripts": {},
+  "scripts": {
+    "test": "npx playwright test"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Evelina-D-QA/Playwright-project.git"
