@@ -7,7 +7,7 @@ export default class GaragePage extends BasePage {
 	public readonly lastCarName: Locator = this.page.locator('.car_name').first();
 
 	async navigate() {
-		await this.page.goto('/panel/garage');
+		await this.page.goto('/panel/garage', { waitUntil: 'networkidle' });
 	}
 
 	async openAddCarForm() {

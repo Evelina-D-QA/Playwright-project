@@ -95,8 +95,8 @@ test('Sample test', async ({ request }) => {
 
 	const response = await request.post('/api/auth/signin', {
 		data: {
-			email: 'evie.maier.w+testUser1@gmail.com',
-			password: 'WCFbdvR2wX5Anm9',
+			email: testUser1.email,
+			password: testUser1.password,
 			remember: false,
 		},
 	});

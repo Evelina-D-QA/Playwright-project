@@ -4,7 +4,7 @@ import step from '../../utils/stepDecorator';
 
 export default class HomePage extends BasePage {
 	private readonly signUpButton: Locator = this.page.locator('//button[contains(@class, "hero-descriptor_btn")]');
-	private readonly signInButton: Locator = this.page.getByRole('button', { name: 'Sign In' });
+	private readonly signInButton: Locator = this.page.locator('//button[contains(@class, "header_signin")]');
 
 	@step('Navigate to home')
 	async navigate() {
@@ -18,7 +18,7 @@ export default class HomePage extends BasePage {
 
 	@step('Open Sign In form')
 	async openSignInForm() {
-		// await this.signInButton.waitFor({ state: 'visible', timeout: 5000 }).catch(() => {});
+		await this.signInButton.waitFor({ state: 'visible', timeout: 5000 });
 		await this.signInButton.click();
 	}
 }

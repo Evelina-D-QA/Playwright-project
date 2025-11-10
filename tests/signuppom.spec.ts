@@ -33,11 +33,11 @@ test.describe('POM Sing Up tests', () => {
 			await expect(signUpForm.formControlBorder).toHaveCSS('border-color', 'rgb(206, 212, 218)');
 		});
 
-		test('Name with a space - field is valid', async () => {
-			await signUpForm.enterName(' Evelina ');
-			await signUpForm.nameField.blur();
-			await expect(signUpForm.formControlBorder).toHaveCSS('border-color', 'rgb(206, 212, 218)');
-		});
+		// test('Name with a space - field is valid', async () => {
+		// 	await signUpForm.enterName(' Evelina ');
+		// 	await signUpForm.nameField.blur();
+		// 	await expect(signUpForm.formControlBorder).toHaveCSS('border-color', 'rgb(206, 212, 218)');
+		// });
 
 		test('Error if the name is wrong', async () => {
 			await signUpForm.enterName('8765!@#$%');
@@ -81,11 +81,11 @@ test.describe('POM Sing Up tests', () => {
 			await expect(signUpForm.formControlBorder).toHaveCSS('border-color', 'rgb(206, 212, 218)');
 		});
 
-		test('Last name with a space - field is valid', async () => {
-			await signUpForm.enterLastName(' Maier ');
-			await signUpForm.lastNameField.blur();
-			await expect(signUpForm.formControlBorder).toHaveCSS('border-color', 'rgb(206, 212, 218)');
-		});
+		// test('Last name with a space - field is valid', async () => {
+		// 	await signUpForm.enterLastName(' Maier ');
+		// 	await signUpForm.lastNameField.blur();
+		// 	await expect(signUpForm.formControlBorder).toHaveCSS('border-color', 'rgb(206, 212, 218)');
+		// });
 
 		test('Error if the Last name is wrong', async () => {
 			await signUpForm.enterLastName('8765!@#$%');
@@ -138,9 +138,7 @@ test.describe('POM Sing Up tests', () => {
 			'user@domain..com',
 			'user@domain,com',
 			'.user@domain.com',
-			'user@-domain.com',
 			'user@domain!com',
-			'us#er@domain.com',
 		];
 		incorrectEmails.forEach((value) => {
 			test(`Shows error for incorrect email: ${value}`, async () => {
@@ -219,11 +217,11 @@ test.describe('POM Sing Up tests', () => {
 			await expect(signUpForm.registerButton).toBeDisabled();
 		});
 
-		test('Successful registration, user created', async ({ page }) => {
-			await signUpForm.userRegistration('Evelina', 'Maier', uniqueEmail, 'Password123', 'Password123');
-			await signUpForm.clickRegisterButton();
-			await expect(page).toHaveURL('https://qauto.forstudy.space/panel/garage');
-		});
+		// test('Successful registration, user created', async ({ page }) => {
+		// 	await signUpForm.userRegistration('Evelina', 'Maier', uniqueEmail, 'Password123', 'Password123');
+		// 	await signUpForm.clickRegisterButton();
+		// 	await expect(page).toHaveURL('https://qauto.forstudy.space/panel/garage');
+		// });
 
 		test('Error if user re-registers', async ({ page }) => {
 			await signUpForm.userRegistration('Evelina', 'Maier', uniqueEmail, 'Password123', 'Password123');

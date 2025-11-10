@@ -8,7 +8,7 @@ test.describe('Intercept & Mock tests', () => {
 		await page.goto('/');
 	});
 
-	test('interception with mocking - fake cars response', async ({ page, garagePage }) => {
+	test('interception with mocking - fake cars response', async ({ page, garagePage, signInForm, homePage }) => {
 		const fakeCars = {
 			status: 'ok',
 			data: [

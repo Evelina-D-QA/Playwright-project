@@ -41,11 +41,15 @@ jobs:
         cache-from: type=gha
         cache-to: type=gha,mode=max
     
+    - name: Create env file
+      run: |
+        echo "BASE_URL=https://qauto.forstudy.space/" >> .env
+        echo "HTTP_USERNAME=${{ secrets.HTTP_USERNAME }}" >> .env
+        echo "HTTP_PASSWORD=${{ secrets.HTTP_PASSWORD }}" >> .env
+
     - name: Run tests in Docker container
       run: |
         docker run --rm --env-file .env \
-          -e HTTP_USERNAME=${{ secrets.HTTP_USERNAME }} \
-          -e HTTP_PASSWORD=${{ secrets.HTTP_PASSWORD }} \
           -v ${{ github.workspace }}/playwright-report:/tests/playwright-report \
           -v ${{ github.workspace }}/test-results:/tests/test-results \
           playwright-tests:latest npx playwright test ${{ inputs.test_options }}
