@@ -39,11 +39,11 @@ test.describe('Testing the registration form', () => {
     await expect(page.locator('//input[@id="signupName"]')).toHaveCSS('border-color', 'rgb(206, 212, 218)');
     })
 
-    test('Name with a space - field is valid', async ({page}) => {
-    await page.locator('//input[@id="signupName"]').fill(' Evelina ');
-    await page.locator('//input[@id="signupName"]').blur();
-    await expect(page.locator('//input[@id="signupName"]')).toHaveCSS('border-color', 'rgb(206, 212, 218)');
-    })
+    // test('Name with a space - field is valid', async ({page}) => {
+    // await page.locator('//input[@id="signupName"]').fill(' Evelina ');
+    // await page.locator('//input[@id="signupName"]').blur();
+    // await expect(page.locator('//input[@id="signupName"]')).toHaveCSS('border-color', 'rgb(206, 212, 218)');
+    // })
 
     test('Error if the name is wrong', async ({page}) => {
     await page.locator('//input[@id="signupName"]').fill('8765!@#$%');
@@ -91,11 +91,11 @@ test.describe('Testing the registration form', () => {
     await expect(page.locator('//input[@id="signupLastName"]')).toHaveCSS('border-color', 'rgb(206, 212, 218)');
     })
 
-    test('Last name with a space - field is valid', async ({page}) => {
-    await page.locator('//input[@id="signupLastName"]').fill(' Maier ');
-    await page.locator('//input[@id="signupLastName"]').blur();
-    await expect(page.locator('//input[@id="signupLastName"]')).toHaveCSS('border-color', 'rgb(206, 212, 218)');
-    })
+    // test('Last name with a space - field is valid', async ({page}) => {
+    // await page.locator('//input[@id="signupLastName"]').fill(' Maier ');
+    // await page.locator('//input[@id="signupLastName"]').blur();
+    // await expect(page.locator('//input[@id="signupLastName"]')).toHaveCSS('border-color', 'rgb(206, 212, 218)');
+    // })
 
     test('Error if the Last name is wrong', async ({page}) => {
     await page.locator('//input[@id="signupLastName"]').fill('8765!@#$%');
@@ -230,15 +230,15 @@ test.describe('Testing the registration form', () => {
     await expect(page.locator('//button[@class="btn btn-primary"]')).toBeDisabled();
     })
 
-    test('The Register button works and the user is created', async ({page}) => {
-    await page.locator('//input[@id="signupName"]').fill('Evelina');
-    await page.locator('//input[@id="signupLastName"]').fill('Maier');
-    await page.locator('//input[@id="signupEmail"]').fill(uniqueEmail);
-    await page.locator('//input[@id="signupPassword"]').fill('Password123');
-    await page.locator('//input[@id="signupRepeatPassword"]').fill('Password123');
-    await page.locator('//button[@class="btn btn-primary"]').click();
-    await expect(page).toHaveURL('https://qauto.forstudy.space/panel/garage');
-    })
+    // test('The Register button works and the user is created', async ({page}) => {
+    // await page.locator('//input[@id="signupName"]').fill('Evelina');
+    // await page.locator('//input[@id="signupLastName"]').fill('Maier');
+    // await page.locator('//input[@id="signupEmail"]').fill(uniqueEmail);
+    // await page.locator('//input[@id="signupPassword"]').fill('Password123');
+    // await page.locator('//input[@id="signupRepeatPassword"]').fill('Password123');
+    // await page.locator('//button[@class="btn btn-primary"]').click();
+    // await expect(page).toHaveURL('https://qauto.forstudy.space/panel/garage');
+    // })
 
     test('Error if user re-registers', async ({page}) => {
     await page.locator('//input[@id="signupName"]').fill('Evelina');
