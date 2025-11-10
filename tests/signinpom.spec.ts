@@ -2,6 +2,7 @@ import { test, expect } from '@playwright/test';
 import HomePage from '../pom/pages/HomePage';
 import SignInForm from '../pom/forms/SignInForm';
 import GaragePage from '../pom/pages/GaragePage';
+import { testUser1 } from '../test-data/users';
 
 test.describe('POM Sign In tests', () => {
 	let homePage: HomePage;
@@ -18,7 +19,7 @@ test.describe('POM Sign In tests', () => {
 	});
 
 	test('Successful sign in', async () => {
-		await signInForm.loginWithCredentials('evie.maier.w+1234567@gmail.com', 'Password123');
+		await signInForm.loginWithCredentials(testUser1.email, testUser1.password);
 		await expect(garagePage.pageTitle).toBeVisible();
 	});
 

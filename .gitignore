@@ -9,7 +9,7 @@ BasePageEx.ts
 signinEx.spec.ts-snapshots
 .env
 .auth
-
+intersept-mock-tests.spec.ts
 
 # Playwright
 node_modules/
