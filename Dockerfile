@@ -1,10 +1,10 @@
 # Use a base image with Playwright pre-installed browsers and dependencies
 FROM mcr.microsoft.com/playwright:v1.56.0-noble
 
-# Set environment variables
-ENV BASE_URL="https://qauto.forstudy.space/"
-ENV HTTP_USERNAME="guest"
-ENV HTTP_PASSWORD="welcome2qauto"
+# # Set environment variables
+# ENV BASE_URL="https://qauto.forstudy.space/"
+# ENV HTTP_USERNAME="guest"
+# ENV HTTP_PASSWORD="welcome2qauto"
 
 # Set the working directory inside the container
 WORKDIR /tests

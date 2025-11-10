@@ -18,9 +18,8 @@ concurrency:
   cancel-in-progress: false
 
 env:
-  BASE_URL: "https://qauto.forstudy.space/"
-  HTTP_USERNAME: "guest"
-  HTTP_PASSWORD: "welcome2qauto"
+  HTTP_USERNAME: ${{ secrets.HTTP_USERNAME }}
+  HTTP_PASSWORD: ${{ secrets.HTTP_PASSWORD }} 
 
 jobs:
   test:

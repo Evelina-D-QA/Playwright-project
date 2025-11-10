@@ -17,9 +17,8 @@ on:
       - main
 
 env:
-  BASE_URL: "https://qauto.forstudy.space/"
-  HTTP_USERNAME: "guest"
-  HTTP_PASSWORD: "welcome2qauto"
+  HTTP_USERNAME: ${{ secrets.HTTP_USERNAME }}
+  HTTP_PASSWORD: ${{ secrets.HTTP_PASSWORD }}
 
 jobs:
   test-docker:
@@ -44,7 +43,7 @@ jobs:
     
     - name: Run tests in Docker container
       run: |
-        docker run --rm \
+        docker run --rm --env-file .env \
           -e HTTP_USERNAME=${{ secrets.HTTP_USERNAME }} \
           -e HTTP_PASSWORD=${{ secrets.HTTP_PASSWORD }} \
           -v ${{ github.workspace }}/playwright-report:/tests/playwright-report \
